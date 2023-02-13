@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <header class="text-center mt-5 mb-4 text-danger">
+      <h1 class="display-5 fw-bolder">
+        Bookmarker App <span class="fs-5">&#169;</span>
+      </h1>
+      <p class="fs-5">Bookmark your favorite sites</p>
+    </header>
+    <main>
+      <div class="container">
+        <div class="input-card p-5 rounded-4 mx-auto mb-5">
+          <div class="mb-5">
+            <div class="input-group">
+              <span class="input-group-text bg-danger-subtle" id="name"
+                >Site Name</span
+              >
+              <input
+                id="siteName"
+                type="text"
+                class="form-control"
+                aria-label="Username"
+                aria-describedby="name"
+                oninput="validateName()"
+              />
+            </div>
+            <p id="vName" class="text-danger my-0 d-none">
+              * Website Name can contain any character up to 10 characters
+            </p>
+          </div>
+          <div class="mb-5">
+            <div class="input-group">
+              <span class="input-group-text bg-danger-subtle" id="url">
+                <i class="fa-solid fa-link me-1 text-danger"></i>URL</span
+              >
+              <input
+                id="siteUrl"
+                type="text"
+                class="form-control"
+                aria-label="Username"
+                aria-describedby="name"
+                oninput="validateUrl()"
+              />
+            </div>
+            <p id="vUrl" class="text-danger my-0 d-none">
+              * Please remove (https://) and add domain name only, i.e.
+              www.google.com
+            </p>
+          </div>
+          <div onclick="addSite()" id="addSite" class="add text-center m-auto">
+            <i class="fa-solid fa-circle-plus fs-1"></i>
+          </div>
+          <p class="copyright py-3">
+            &#169; By
+            <a
+              href="https://www.linkedin.com/in/imostafarh/"
+              target="_blank"
+              class="text-danger text-decoration-none"
+              >Mostafa Ragab</a
+            >
+          </p>
+        </div>
+        <div id="bookmarks" class="text-center fs-5"></div>
+      </div>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
